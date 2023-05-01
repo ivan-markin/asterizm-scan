@@ -1,0 +1,44 @@
+.hero {
+	background: url('../img/hero-bg.png') no-repeat bottom center;
+	background-size: cover;
+	height: 360px;
+	margin-bottom: 112px;
+
+	&__cnt {
+		position: relative;
+		bottom: -80px;
+	}
+
+	&__parameters {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);		
+		gap: 24px;
+
+		&-item {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;			
+			gap: 11px;
+			background: linear-gradient(180deg, rgba(8, 10, 31, 0.55) 0%, rgba(13, 20, 73, 0.55) 100%);
+			border: 1px solid #2C2D54;
+			backdrop-filter: blur(20px);			
+			border-radius: 18px;
+			padding: 30px 40px;
+
+			&-title {
+				font-weight: 700;
+				font-size: 12px;
+				line-height: 1;				
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+			}
+
+			&-value {
+				font-weight: 300;
+				font-size: 48px;
+				line-height: 1;
+				white-space: nowrap;
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+.header {		
+	border-bottom: #2C2D54 1px solid;	
+
+	&__cnt {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100px;
+	}
+}

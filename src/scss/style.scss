@@ -1,0 +1,53 @@
+@import './normalize.scss';
+@import './fonts.scss';
+@import './variables';
+
+// Blocks
+
+@import './header.scss';
+@import './hero.scss';
+@import './menu.scss';
+@import './primary-title.scss';
+@import './search-input.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Onest', 'Roboto', sans-serif;
+  color: var(--font-color);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  background-color: #020514;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.container {  
+  min-width: 320px;    
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1366px;
+  padding: 0 64px;
+  margin: 0 auto;
+}
+
+
