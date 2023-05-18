@@ -1,0 +1,16 @@
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.loader {
+	width: 68px;
+	height: 68px;
+	background: url('../img/loader.png') no-repeat center;
+	background-size: contain;
+	animation: rotate infinite linear 1.2s;
+}

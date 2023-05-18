@@ -418,6 +418,13 @@ template {
   --font-color: white;
 }
 
+.block-title {
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0;
+}
+
 .copy-btn {
   width: 16px;
   height: 16px;
@@ -573,10 +580,8 @@ template {
   margin-bottom: 0 !important;
 }
 
-.no-webp .hero {
-  background: url("../img/hero-bg.png") no-repeat bottom center; }
-
 .hero {
+  background: url("../img/hero-bg.png") no-repeat bottom center;
   background-size: cover;
   height: 360px;
 }
@@ -637,6 +642,56 @@ template {
   background-size: contain;
   border: none;
   cursor: pointer;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.loader {
+  width: 68px;
+  height: 68px;
+  background: url("../img/loader.png") no-repeat center;
+  background-size: contain;
+  -webkit-animation: rotate infinite linear 1.2s;
+          animation: rotate infinite linear 1.2s;
+}
+
+.loader-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #193EFF;
 }
 
 .menu__list {
@@ -1045,6 +1100,33 @@ template {
   color: white;
 }
 
+.table__empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 500px;
+  gap: 8px;
+  padding: 0 40px;
+}
+
+.table__empty-caption {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  color: #7C80AB;
+  text-align: center;
+}
+
 .txn-hash-col {
   width: 25%;
 }
@@ -1219,10 +1301,8 @@ fieldset {
     margin-top: 30px;
   }
 
-  .no-webp .hero {
-    background: url("../img/hero-bg_mobile.png") no-repeat bottom center; }
-
   .hero {
+    background: url("../img/hero-bg_mobile.png") no-repeat bottom center;
     background-size: cover;
     height: 645px;
   }
@@ -1326,11 +1406,4 @@ fieldset {
   .wrap {
     padding: 0 20px;
   }
-}
-
-.webp .hero { background: url(../img/hero-bg.webp) no-repeat bottom center; }
-
-@media (max-width: 768px) {
-
-  .webp .hero { background: url(../img/hero-bg_mobile.webp) no-repeat bottom center; }
 }
