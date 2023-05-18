@@ -1,10 +1,62 @@
 .header {		
 	border-bottom: #2C2D54 1px solid;	
 
+	@media (max-width: 768px) {
+		border: none;
+	}
+
+	&_inner {				
+		.menu-btn {
+			position: absolute;
+			right: 0;
+			top: 24px;
+		}
+	}
+
+	&__logo {
+		width: 312px;
+
+		@media (max-width: 768px) {
+			width: 221px;
+		}
+	}
+
+	&__menu {
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
 	&__cnt {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		height: 100px;
+
+		@media (max-width: 768px) {
+			height: auto;
+			padding: 24px 0 0;
+		}
+	}
+
+	&_inner &__cnt {
+		position: relative;
+		
+		@media (max-width: 768px) {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 28px 0 0;
+		}		
+	}
+
+	&__search-input {
+		width: 100%;
+		max-width: 360px;
+		margin-bottom: 0 !important;
+
+		@media (max-width: 768px) {
+			max-width: none;
+			margin-top: 30px;
+		}
 	}
 }

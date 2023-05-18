@@ -7,42 +7,28 @@
 
 <body>
 
+	@@include('./html/mobile-menu.html', {})
+
 	<div class="hero">
 		<header class="header">
 			<div class="wrap">
 				<div class="header__cnt">
-					<img src="@img/asterizm-scan-logo.svg" alt="">
+					<a href="/"><img class="header__logo" src="@img/asterizm-scan-logo.svg" alt=""></a>
 
-					<nav class="menu">
-						<ul class="menu__list">
-							<li class="menu__item"><a class="menu__link" href="">API docs</a></li>
-							<li class="menu__item"><a class="menu__link" href="">I want to know more</a></li>
-						</ul>
-					</nav>
+					@@include('./html/menu.html', {
+						'className': 'header__menu'
+					})
+
+					<button class="menu-btn menu-open">
+						<img src="@img/burger-icon.svg" alt="">
+					</button>
 				</div>
 			</div>
 		</header>
 
 		<div class="wrap">
 			<div class="hero__cnt">
-				<h1 class="primary-title">Asterizm cross-chain scan</h1>
-				<div class="hero__parameters">
-					<section class="hero__parameters-item">
-						<img src="@img/transactions-icon.svg" alt="">
-						<span class="hero__parameters-item-title">Transactions for all time</span>
-						<span class="hero__parameters-item-value">180 736</span>
-					</section>
-					<section class="hero__parameters-item">
-						<img src="@img/networks-icon.svg" alt="">
-						<span class="hero__parameters-item-title">Supported networks</span>
-						<span class="hero__parameters-item-value">50</span>
-					</section>
-					<section class="hero__parameters-item">
-						<img src="@img/protected-icon.svg" alt="">
-						<span class="hero__parameters-item-title">Bytes of protected data</span>
-						<span class="hero__parameters-item-value">175 000 215</span>
-					</section>
-				</div>
+				<h1 class="primary-title">Asterizm cross-chain scan</h1>				
 			</div>
 		</div>
 	</div>
@@ -50,15 +36,111 @@
 	<main class="main">
 		<div class="wrap">
 			
+			<div class="parameters">
+				<section class="parameters__item">
+					<img src="@img/transactions-icon.svg" alt="">
+					<span class="parameters__item-title">Transactions for all time</span>
+					<span class="parameters__item-value">180 736</span>
+				</section>
+				<section class="parameters__item">
+					<img src="@img/networks-icon.svg" alt="">
+					<span class="parameters__item-title">Supported networks</span>
+					<span class="parameters__item-value">50</span>
+				</section>
+				<section class="parameters__item">
+					<img src="@img/protected-icon.svg" alt="">
+					<span class="parameters__item-title">Bytes of protected data</span>
+					<span class="parameters__item-value">175 000 215</span>
+				</section>
+			</div>
+			
 			<div class="search-input">
 				<input type="text" placeholder="Search by Address / Txn Hash / Block">
 				<button class="search-input__btn">
 					<img src="@img/search-icon.svg" alt="">
 				</button>
 			</div>
+
+			<div class="table">
+				<header class="table__header">
+					<span class="txn-hash-col">Txn Hash</span>					
+					<span class="status-col">Status</span>
+					<span class="from-col">From</span>
+					<span class="to-col">To</span>
+					<span class="time-col">Time</span>					
+				</header>
+
+				<div class="table__body">
+					<div class="table__wrap">
+						<div class="table__content">
+						
+							@@include('./html/table-row.html', {
+								'status': 'delivered',
+								'from': 'avalanche',
+								'to': 'ethereum',
+								'time': 'Now'
+							})
+	
+							@@include('./html/table-row.html', {
+								'status': 'error',
+								'from': 'boba',
+								'to': 'bsc',
+								'time': '1 minute ago'
+							})
+	
+							@@for (var i = 0; i < 5; i++) {
+	
+								@@include('./html/table-row.html', {
+									'status': 'pending',
+									'from': 'celo',
+									'to': 'arbitrum',
+									'time': '5 minutes ago'
+								})
+	
+							}												
+	
+							@@include('./html/table-row.html', {
+								'status': 'delivered',
+								'from': 'avalanche',
+								'to': 'ethereum',
+								'time': '10 minutes ago'
+							})
+	
+							@@include('./html/table-row.html', {
+								'status': 'delivered',
+								'from': 'avalanche',
+								'to': 'ethereum',
+								'time': '1 hour ago'
+							})
+	
+							@@include('./html/table-row.html', {
+								'status': 'pending',
+								'from': 'harmony',
+								'to': 'fantom',
+								'time': 'Nov 26, 20:12:46 GMT'
+							})
+	
+							@@for (var i = 0; i < 15; i++) {
+	
+								@@include('./html/table-row.html', {
+									'status': 'pending',
+									'from': 'harmony',
+									'to': 'fantom',
+									'time': 'Nov 26, 20:12:46 GMT'
+								})
+	
+							}	
+	
+						</div>
+					</div>					
+				</div>
+			</div>
 		
 		</div>
 	</main>	
 
+	@@include('./html/footer.html', {})
+
+	<script src="./js/app.min.js"></script>
 </body>
 </html>

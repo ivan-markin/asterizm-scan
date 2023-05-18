@@ -1,0 +1,45 @@
+.mobile-menu {
+	display: flex;
+	flex-direction: column;	
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #020514;
+	z-index: -1;
+	visibility: hidden;
+	opacity: 0;
+	overflow-y: scroll;
+	transition: all .3s;
+	padding: 0 20px 42px;
+
+	&.active {
+		z-index: 12;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&__header {
+		margin-bottom: 52px;
+	}
+
+	&__menu {
+		
+		.menu__list {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 3.8vh;
+			width: 100%;
+		}
+
+		.menu__item {
+			font-size: 24px;
+			border-bottom: #2C2D54 1px solid;
+			width: 100%;
+			padding-bottom: 3.8vh;
+		}
+	}
+}

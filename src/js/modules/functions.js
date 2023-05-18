@@ -13,3 +13,17 @@ export function isWebp() {
     document.documentElement.classList.add(className);
   });  
 }
+
+export function mobileMenuHandler() {
+  const menuPopupEl = document.querySelector('.mobile-menu');
+  
+  document.querySelector('.menu-open').addEventListener('click', () => {    
+    menuPopupEl.classList.add('active');	
+    document.body.classList.add('fixed');    
+  })
+  
+  document.querySelector('.menu-close').addEventListener('click', () => {    
+    menuPopupEl.classList.remove('active');	
+    document.body.classList.remove('fixed');
+  })
+}

@@ -4,11 +4,21 @@
 
 // Blocks
 
+@import './copy-btn.scss';
+@import './details.scss';
+@import './footer.scss';
 @import './header.scss';
 @import './hero.scss';
+@import './info-btn.scss';
 @import './menu.scss';
+@import './menu-btn.scss';
+@import './mobile-menu.scss';
+@import './page-content.scss';
+@import './parameters.scss';
 @import './primary-title.scss';
 @import './search-input.scss';
+@import './status-badge.scss';
+@import './table.scss';
 
 *,
 *::before,
@@ -48,6 +58,10 @@ fieldset {
   max-width: 1366px;
   padding: 0 64px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 }
 
 

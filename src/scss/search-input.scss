@@ -6,6 +6,11 @@
 	border: 1px solid #2C2D54;
 	border-radius: 16px;
 	padding: 0 10px 0 16px;
+	margin-bottom: 32px;
+
+	@media (max-width: 768px) {
+		margin-bottom: 24px;
+	}
 
 	input {
 		border: none;

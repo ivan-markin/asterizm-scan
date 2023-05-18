@@ -1,0 +1,14 @@
+.menu-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 30px;
+	border-radius: 15px;
+	background-color: #2C2D54;
+	border: none;
+	
+	@media (min-width: 769px) {
+		display: none;
+	}
+}

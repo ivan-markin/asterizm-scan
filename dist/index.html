@@ -6,48 +6,53 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./css/style.min.css?_v=20230518172305">
   <title>Asterizm cross-chain scan</title>
 </head>
 
 <body>
 
+	<div class="mobile-menu">
+	<header class="mobile-menu__header header">
+		<div class="header__cnt">
+			<img class="header__logo" src="img/asterizm-scan-logo.svg" alt="">					
+			<button class="menu-btn menu-close">
+				<img src="img/close-icon.svg" alt="">
+			</button>
+		</div>		
+	</header>
+
+	<nav class="mobile-menu__menu menu">
+	<ul class="menu__list">
+		<li class="menu__item"><a class="menu__link" href="">API docs</a></li>
+		<li class="menu__item"><a class="menu__link" href="">I want to know more</a></li>
+	</ul>
+</nav>	
+</div>
+
 	<div class="hero">
 		<header class="header">
 			<div class="wrap">
 				<div class="header__cnt">
-					<img src="img/asterizm-scan-logo.svg" alt="">
+					<a href="/"><img class="header__logo" src="img/asterizm-scan-logo.svg" alt=""></a>
 
-					<nav class="menu">
-						<ul class="menu__list">
-							<li class="menu__item"><a class="menu__link" href="">API docs</a></li>
-							<li class="menu__item"><a class="menu__link" href="">I want to know more</a></li>
-						</ul>
-					</nav>
+					<nav class="header__menu menu">
+	<ul class="menu__list">
+		<li class="menu__item"><a class="menu__link" href="">API docs</a></li>
+		<li class="menu__item"><a class="menu__link" href="">I want to know more</a></li>
+	</ul>
+</nav>
+
+					<button class="menu-btn menu-open">
+						<img src="img/burger-icon.svg" alt="">
+					</button>
 				</div>
 			</div>
 		</header>
 
 		<div class="wrap">
 			<div class="hero__cnt">
-				<h1 class="primary-title">Asterizm cross-chain scan</h1>
-				<div class="hero__parameters">
-					<section class="hero__parameters-item">
-						<img src="img/transactions-icon.svg" alt="">
-						<span class="hero__parameters-item-title">Transactions for all time</span>
-						<span class="hero__parameters-item-value">180 736</span>
-					</section>
-					<section class="hero__parameters-item">
-						<img src="img/networks-icon.svg" alt="">
-						<span class="hero__parameters-item-title">Supported networks</span>
-						<span class="hero__parameters-item-value">50</span>
-					</section>
-					<section class="hero__parameters-item">
-						<img src="img/protected-icon.svg" alt="">
-						<span class="hero__parameters-item-title">Bytes of protected data</span>
-						<span class="hero__parameters-item-value">175 000 215</span>
-					</section>
-				</div>
+				<h1 class="primary-title">Asterizm cross-chain scan</h1>				
 			</div>
 		</div>
 	</div>
@@ -55,15 +60,910 @@
 	<main class="main">
 		<div class="wrap">
 			
+			<div class="parameters">
+				<section class="parameters__item">
+					<img src="img/transactions-icon.svg" alt="">
+					<span class="parameters__item-title">Transactions for all time</span>
+					<span class="parameters__item-value">180 736</span>
+				</section>
+				<section class="parameters__item">
+					<img src="img/networks-icon.svg" alt="">
+					<span class="parameters__item-title">Supported networks</span>
+					<span class="parameters__item-value">50</span>
+				</section>
+				<section class="parameters__item">
+					<img src="img/protected-icon.svg" alt="">
+					<span class="parameters__item-title">Bytes of protected data</span>
+					<span class="parameters__item-value">175 000 215</span>
+				</section>
+			</div>
+			
 			<div class="search-input">
 				<input type="text" placeholder="Search by Address / Txn Hash / Block">
 				<button class="search-input__btn">
 					<img src="img/search-icon.svg" alt="">
 				</button>
 			</div>
+
+			<div class="table">
+				<header class="table__header">
+					<span class="txn-hash-col">Txn Hash</span>					
+					<span class="status-col">Status</span>
+					<span class="from-col">From</span>
+					<span class="to-col">To</span>
+					<span class="time-col">Time</span>					
+				</header>
+
+				<div class="table__body">
+					<div class="table__wrap">
+						<div class="table__content">
+						
+							<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge delivered">delivered</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/avalanche.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/ethereum.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Now</span>
+	</div>	
+</div>
+	
+							<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge error">error</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/boba.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/bsc.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">1 minute ago</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/celo.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/arbitrum.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">5 minutes ago</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/celo.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/arbitrum.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">5 minutes ago</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/celo.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/arbitrum.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">5 minutes ago</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/celo.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/arbitrum.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">5 minutes ago</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/celo.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/arbitrum.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">5 minutes ago</span>
+	</div>	
+</div>
+	
+																			
+	
+							<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge delivered">delivered</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/avalanche.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/ethereum.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">10 minutes ago</span>
+	</div>	
+</div>
+	
+							<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge delivered">delivered</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/avalanche.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/ethereum.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">1 hour ago</span>
+	</div>	
+</div>
+	
+							<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+							
+	
+								<div class="table__row">
+	<div class="table__cell txn-hash-col">
+		<span class="table__cell-title">Txn Hash</span>
+		<div class="table__cell-cnt">
+			<img src="img/asterizm-table-icon.svg" alt="">
+			<a href="transaction-details.html">0x322cb11463f702f0...</a>
+		</div>
+	</div>	
+	<div class="table__cell status-col">
+		<span class="table__cell-title">Status</span>
+		<span class="status-badge pending">pending</span>
+	</div>
+	<div class="table__cell from-col">
+		<span class="table__cell-title">From</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/harmony.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell to-col">
+		<span class="table__cell-title">To</span>
+		<div class="table__cell-cnt">
+			<img src="img/networks-icons/fantom.svg" alt="">
+			<span>0x322cb11463f702f0...</span>
+		</div>								
+	</div>
+	<div class="table__cell time-col">
+		<span class="table__cell-title">Time</span>
+		<span class="table__cell-cnt">Nov 26, 20:12:46 GMT</span>
+	</div>	
+</div>
+	
+								
+	
+						</div>
+					</div>					
+				</div>
+			</div>
 		
 		</div>
 	</main>	
 
+	<footer class="footer @@className">
+	<div class="wrap">
+		<div class="footer__container">			
+			<img src="img/asterizm-logo.svg" alt="">
+			<span class="footer__copyrights">© 2023 Asterizm Scan. All rights reserved</span>
+			<div class="footer__socials">
+				<a href=""><img src="img/twitter-footer-icon.svg" alt=""></a>
+				<a href=""><img src="img/telegram-footer-icon.svg" alt=""></a>
+				<a href=""><img src="img/github-footer-icon.svg" alt=""></a>
+			</div>
+		</div>
+	</div>      
+</footer>
+
+	<script src="./js/app.min.js?_v=20230518172305"></script>
 </body>
 </html>

@@ -3,3 +3,4 @@ import smoothscroll from 'smoothscroll-polyfill';
 
 flsFunctions.isWebp();
 smoothscroll.polyfill();
+flsFunctions.mobileMenuHandler();
