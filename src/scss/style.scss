@@ -17,6 +17,7 @@
 @import './menu-btn.scss';
 @import './mobile-menu.scss';
 @import './page-content.scss';
+@import './pagination.scss';
 @import './parameters.scss';
 @import './primary-title.scss';
 @import './search-input.scss';
@@ -63,7 +64,7 @@ fieldset {
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    padding: 0 20px;
+    padding: 0 16px;
   }
 }
 
