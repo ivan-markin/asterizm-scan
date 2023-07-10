@@ -416,6 +416,7 @@ template {
 
 :root {
   --font-color: white;
+  --error-color: #EB3333;
 }
 
 .block-title {
@@ -969,8 +970,13 @@ template {
   height: 60px;
   border: 1px solid #2C2D54;
   border-radius: 16px;
+  position: relative;
   padding: 0 10px 0 16px;
   margin-bottom: 32px;
+}
+
+.search-input.error {
+  border-color: #EB5757;
 }
 
 .search-input input {
@@ -1026,6 +1032,14 @@ template {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.search-input__error-message {
+  position: absolute;
+  bottom: -22px;
+  left: 13px;
+  color: var(--error-color);
+  font-size: 12px;
 }
 
 .status-badge {
@@ -1457,6 +1471,10 @@ fieldset {
 
   .search-input {
     margin-bottom: 24px;
+  }
+
+  .search-input.error {
+    margin-bottom: 32px;
   }
 
   .status-badge {
