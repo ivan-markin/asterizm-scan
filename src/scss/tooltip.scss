@@ -1,0 +1,21 @@
+.tooltip {
+	display: flex;
+	align-items: center;	
+	background-color: #171736;
+	border-radius: 4px;
+	font-size: 14px;
+	color: white;	
+	height: 30px;	
+	padding: 8px;
+
+	&::after {
+		content: '';
+		width: 12px;
+		height: 6px;
+		background: url('../img/tooltip-pointer.svg') no-repeat center;
+		background-size: contain;
+		position: absolute;
+		bottom: -6px;
+		left: calc(50% - 6px);
+	}
+}

@@ -115,7 +115,7 @@
 	&__cell {		
 		display: flex;
 		align-items: center;
-		overflow: hidden;
+		// overflow: hidden;
 		white-space: nowrap;		
 		
 		@media (max-width: 768px) {
@@ -175,6 +175,39 @@
 			line-height: 1.43;	
 			color: #7C80AB;
 			text-align: center;
+		}
+	}
+
+	&__icon-cnt {
+		position: relative;
+
+		.tooltip {
+			position: absolute;
+			top: -40px;
+			left: 50%;
+			transform: translateX(-50%);
+			text-transform: capitalize;
+			transition: all .1s;
+			visibility: hidden;
+			opacity: 0;
+			z-index: -1;
+		}
+
+		&:hover .tooltip {
+			visibility: visible;
+			opacity: 1;
+			z-index: 10;
+		}
+	}
+
+	&__row:first-of-type &__icon-cnt .tooltip {
+		top: auto;
+		bottom: -40px;
+
+		&::after {
+			transform: rotate(180deg);
+			bottom: auto;
+			top: -6px;
 		}
 	}
 }
