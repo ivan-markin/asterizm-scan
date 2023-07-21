@@ -155,11 +155,45 @@
 
 			a {
 				color: #3555FF;
-				text-decoration-color: #24358C;				
+				text-decoration-color: #24358C;	
+				position: relative;			
 				transition: all .1s;
+
+				.tooltip {
+					text-decoration: none; 
+					position: absolute;
+					top: -40px;
+					left: -8px;					
+					transition: all .1s;
+					visibility: hidden;
+					opacity: 0;
+					z-index: -1;
+					font-size: 12px;
+
+					&::after {
+						left: 20px;
+					}
+				}
+
+				.table__row:first-of-type & .tooltip {				
+					bottom: -40px;			
+					top: auto;
+
+					&::after {
+						transform: rotate(180deg);
+						bottom: auto;
+						top: -6px;
+					}
+				}
 				
 				&:hover {
-					color: #2A44CB;
+					color: #2A44CB;					
+			
+					&:hover .tooltip {
+						visibility: visible;
+						opacity: 1;
+						z-index: 10;
+					}
 				}
 			}
 		}
@@ -217,6 +251,40 @@
 			transform: rotate(180deg);
 			bottom: auto;
 			top: -6px;
+		}
+	}
+
+	&__hash {
+		position: relative;
+
+		.tooltip {
+			position: absolute;
+			top: -40px;
+			left: 50%;
+			transform: translateX(-50%);
+			text-transform: capitalize;
+			transition: all .1s;
+			visibility: hidden;
+			opacity: 0;
+			z-index: -1;
+			font-size: 12px;
+		}
+
+		.table__row:first-of-type & .tooltip {
+			bottom: -40px;
+			top: auto;
+
+			&::after {
+				top: -6px;
+				bottom: auto;
+				transform: rotate(180deg);
+			}
+		}
+
+		&:hover .tooltip {
+			visibility: visible;
+			opacity: 1;
+			z-index: 10;
 		}
 	}
 }

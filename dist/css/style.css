@@ -1224,13 +1224,51 @@ template {
   color: #3555FF;
   -webkit-text-decoration-color: #24358C;
           text-decoration-color: #24358C;
+  position: relative;
   -webkit-transition: all 0.1s;
   -o-transition: all 0.1s;
   transition: all 0.1s;
 }
 
+.table__cell-cnt a .tooltip {
+  text-decoration: none;
+  position: absolute;
+  top: -40px;
+  left: -8px;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+  font-size: 12px;
+}
+
+.table__cell-cnt a .tooltip::after {
+  left: 20px;
+}
+
+.table__row:first-of-type .table__cell-cnt a .tooltip {
+  bottom: -40px;
+  top: auto;
+}
+
+.table__row:first-of-type .table__cell-cnt a .tooltip::after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  bottom: auto;
+  top: -6px;
+}
+
 .table__cell-cnt a:hover {
   color: #2A44CB;
+}
+
+.table__cell-cnt a:hover:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  z-index: 10;
 }
 
 .table__cell.time-col .table__cell-cnt {
@@ -1301,6 +1339,46 @@ template {
           transform: rotate(180deg);
   bottom: auto;
   top: -6px;
+}
+
+.table__hash {
+  position: relative;
+}
+
+.table__hash .tooltip {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-transform: capitalize;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+  font-size: 12px;
+}
+
+.table__row:first-of-type .table__hash .tooltip {
+  bottom: -40px;
+  top: auto;
+}
+
+.table__row:first-of-type .table__hash .tooltip::after {
+  top: -6px;
+  bottom: auto;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.table__hash:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+  z-index: 10;
 }
 
 .txn-hash-col {
@@ -1440,6 +1518,10 @@ fieldset {
 
   .menu__item {
     font-size: 1.33vw;
+  }
+
+  .tooltip {
+    font-size: 10px;
   }
 }
 
@@ -1629,6 +1711,10 @@ fieldset {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+
+  .tooltip {
+    display: none;
   }
 
   .wrap {
