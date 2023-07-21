@@ -433,6 +433,14 @@ template {
   background-size: contain;
   cursor: pointer;
   border: none;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.copy-btn.success {
+  background: url("../img/copy-icon_success.svg") no-repeat center;
+  cursor: auto;
 }
 
 .details {
@@ -1130,7 +1138,7 @@ template {
   background: #060B21;
   border: 1px solid #2C2D55;
   border-radius: 16px;
-  padding: 30px 16px 30px 30px;
+  padding: 30px 16px;
 }
 
 .table__wrap {
@@ -1160,7 +1168,7 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 32px;
+  gap: 10px;
 }
 
 .table__row {
@@ -1170,7 +1178,16 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-right: 39px;
+  height: 56px;
+  border-radius: 8px;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  padding: 0 39px 0 12px;
+}
+
+.table__row:hover {
+  background-color: rgba(10, 18, 52, 0.6509803922);
 }
 
 .table__row:last-child {
@@ -1205,7 +1222,15 @@ template {
 
 .table__cell-cnt a {
   color: #3555FF;
-  text-decoration: none;
+  -webkit-text-decoration-color: #24358C;
+          text-decoration-color: #24358C;
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.table__cell-cnt a:hover {
+  color: #2A44CB;
 }
 
 .table__cell.time-col .table__cell-cnt {
@@ -1541,6 +1566,10 @@ fieldset {
     margin-bottom: 32px;
   }
 
+  .search-input__error-message {
+    bottom: -32px;
+  }
+
   .status-badge {
     font-size: 13px;
   }
@@ -1552,10 +1581,6 @@ fieldset {
 
   .table__header {
     display: none;
-  }
-
-  .table__body {
-    padding: 30px 16px;
   }
 
   .table__wrap {
@@ -1578,6 +1603,7 @@ fieldset {
             flex-direction: column;
     gap: 16px;
     border-bottom: #2C2D55 1px solid;
+    height: auto;
     padding: 0 0 26px 0;
   }
 

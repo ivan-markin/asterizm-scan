@@ -5,4 +5,10 @@
 	background-size: contain;
 	cursor: pointer;
 	border: none;
+	transition: all .1s;
+
+	&.success {
+		background: url('../img/copy-icon_success.svg') no-repeat center;
+		cursor: auto;
+	}
 }

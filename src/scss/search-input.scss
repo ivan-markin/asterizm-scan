@@ -55,5 +55,9 @@
 		left: 13px;
 		color: var(--error-color);
 		font-size: 12px;
+
+		@media (max-width: 768px) {
+			bottom: -32px;
+		}
 	}
 }
