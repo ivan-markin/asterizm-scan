@@ -1141,25 +1141,6 @@ template {
   padding: 30px 16px;
 }
 
-.table__wrap {
-  height: 870px;
-  overflow-y: scroll;
-}
-
-.table__wrap::-webkit-scrollbar {
-  width: 4px;
-}
-
-.table__wrap::-webkit-scrollbar-track {
-  background-color: rgba(0, 113, 255, 0.1490196078);
-  border-radius: 2px;
-}
-
-.table__wrap::-webkit-scrollbar-thumb {
-  background-color: #0071FF;
-  border-radius: 2px;
-}
-
 .table__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1183,7 +1164,7 @@ template {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  padding: 0 39px 0 12px;
+  padding: 0 12px;
 }
 
 .table__row:hover {
@@ -1665,15 +1646,6 @@ fieldset {
     display: none;
   }
 
-  .table__wrap {
-    overflow: visible;
-    height: auto;
-  }
-
-  .table__wrap::-webkit-scrollbar {
-    display: none;
-  }
-
   .table__content {
     gap: 16px;
   }
@@ -1687,6 +1659,10 @@ fieldset {
     border-bottom: #2C2D55 1px solid;
     height: auto;
     padding: 0 0 26px 0;
+  }
+
+  .table__row:hover {
+    background: none;
   }
 
   .table__cell {
